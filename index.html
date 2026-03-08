@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal website of Caden Bruce - UC Berkeley EECS student, programmer, and builder.">
+
+<script>
+if (localStorage.getItem("theme") === "dark") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+
+<title>Caden Bruce | EECS @ UC Berkeley</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <body id="top">
+  <div class="progress-bar"></div>
+
+  <header class="navbar">
+    <a href="#" class="logo">Caden Bruce</a>
+
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="Resume/CadenBruce_Resume.pdf" target="_blank">Resume</a>
+
+    </nav>
+
+    <label class="theme-switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+ <!-- Hero Section -->
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Hi, I'm Caden Bruce</h1>
+
+<p>
+Electrical Engineering and Computer Science student at UC Berkeley.
+I enjoy building technology, exploring robotics, and developing software projects.
+</p>
+
+<div class="hero-buttons">
+<button class="primary-btn">View My Work</button>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="Images/Portrait.png" alt="Caden Bruce">
+</div>
+
+</section>
+
+<!-- Projects Section -->
+
+<section id="projects" class="section">
+
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<img src="images/micromouse.avif" alt="Micromouse Robot">
+
+<h3>Micromouse Robot (In Progress)</h3>
+
+<p>
+A maze-solving robot that uses sensors and navigation algorithms to detect walls and 
+compute efficient paths through a maze. This project combines robotics, electronics, and 
+embedded systems programming to integrate hardware with control software. More features 
+and updates coming soon.
+</p>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="Images/Websitecover.avif" alt="Personal Website">
+
+<h3>Personal Website</h3>
+
+<p>
+This website was built from scratch using HTML, CSS, and JavaScript to showcase my projects,
+skills, and interests. It includes responsive layout design, interactive components, and 
+features such as dark/light mode and smooth navigation. The site is version-controlled with
+Git and will continue to evolve as I develop new projects.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact Section -->
+
+
+<section id="contact" class="section">
+
+<h2>Contact Me</h2>
+
+<p class="contact-links">
+  <a href="https://www.linkedin.com/in/cadenbruce/" target="_blank">LinkedIn</a> |
+  <a href="mailto:cbruce22@berkeley.edu">cbruce22@berkeley.edu</a>
+</p>
+
+<form id="contact-form" action="https://formspree.io/f/mwvrpbnz" method="POST">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Message</label>
+<textarea name="message" required></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Caden Bruce</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
