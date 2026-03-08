@@ -6,7 +6,7 @@ This project focuses on learning how modern websites work at a fundamental level
 
 ## Live Website
 
-https://bigbruce2500.github.io/portfolio-website
+https://bigbruce2500.github.io/
 
 ## Technologies Used
 
