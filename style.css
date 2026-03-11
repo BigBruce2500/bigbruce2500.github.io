@@ -459,6 +459,11 @@ textarea:focus {
   box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.12);
 }
 
+.dark input:focus,
+.dark textarea:focus {
+  box-shadow: 0 0 0 4px rgba(255, 45, 45, 0.2);
+}
+
 /* =====================================================
 BUTTONS
 ===================================================== */
