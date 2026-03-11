@@ -125,7 +125,7 @@ if (progressBar) {
     const scrollTop = window.scrollY;
     const docHeight = document.body.scrollHeight - window.innerHeight;
 
-    const progress = (scrollTop / docHeight) * 100;
+    const progress = docHeight <= 0 ? 0 : Math.min(100, (scrollTop / docHeight) * 100);
 
     progressBar.style.width = progress + "%";
 
