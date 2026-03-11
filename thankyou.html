@@ -6,33 +6,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Message Sent</title>
 
-<link rel="stylesheet" href="styles.css">
+<script>
+if (localStorage.getItem("theme") === "dark") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  text-align:center;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
 }
 
-.thankyou-box{
-  padding:60px;
-  border-radius:20px;
-  max-width:500px;
+.thankyou-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.thankyou-box h1{
-  font-size:36px;
-  margin-bottom:15px;
+.thankyou-box {
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 500px;
 }
 
-.thankyou-box p{
-  font-size:18px;
-  opacity:0.85;
-  margin-bottom:30px;
+.thankyou-box h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.thankyou-box p {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 30px;
 }
 
 </style>
@@ -41,6 +56,21 @@ body{
 
 <body>
 
+<div class="progress-bar"></div>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Caden Bruce</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+  <label class="theme-switch" aria-label="Toggle dark mode">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider"></span>
+  </label>
+</header>
+
+<main class="thankyou-main">
 <div class="thankyou-box">
 
 <h1>Message Sent!</h1>
@@ -54,6 +84,9 @@ Back to Home
 </a>
 
 </div>
+</main>
+
+<script src="script.js"></script>
 
 </body>
 
