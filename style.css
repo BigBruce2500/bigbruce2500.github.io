@@ -401,6 +401,8 @@ HOBBIES
 
 .hobby-images img {
   width: 220px;
+  max-width: 100%;
+  height: auto;
   border-radius: 16px;
   box-shadow: var(--shadow);
 }
