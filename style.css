@@ -1,61 +1,58 @@
-/* =====================================================
-RESET
-===================================================== */
+
+/* RESET*/
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;     /* removes default browser margin from ALL elements */
+  padding: 0;    /* removes default browser padding */
+  box-sizing: border-box;  /* makes width/height include padding and border */
 }
 
-/* =====================================================
-THEME VARIABLES
-===================================================== */
+/* THEME VARIABLES*/
 
 :root {
-  --bg: #f5f7fb;
-  --text: #0f172a;
-  --primary: #00e5ff;
-  --accent: #8b5cf6;
-  --card: rgba(255, 255, 255, 0.75);
-  --border: rgba(15, 23, 42, 0.08);
-  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --bg: #f5f7fb; /* main background color */
+  --text: #0f172a; /* main text color */
+  --primary: #00e5ff; /* primary highlight color for light mode */
+  --accent: #8b5cf6; /* secondary highlight color for some*/
+  --card: rgba(255, 255, 255, 0.75); /* card background */
+  --border: rgba(15, 23, 42, 0.08); /* subtle border color */
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08); /* default box shadow */
+
 }
 
 .dark {
-  --bg: #050505;
-  --text: #f5f5f5;
+  --bg: #050505; /* darker page background */
+  --text: #f5f5f5; /* light text for dark mode */
 
-  --primary: #ff2d2d;
-  --accent: #b91c1c;
 
-  --card: rgba(20, 20, 20, 0.82);
-  --border: rgba(255, 255, 255, 0.06);
+  --primary: #ff2d2d; /* red primary highlight */
+  --accent: #b91c1c;  /* darker red accent */
 
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  --card: rgba(20, 20, 20, 0.82); /* darker cards */
+  --border: rgba(255, 255, 255, 0.06); /* lighter border for dark mode */
+
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* stronger shadow */
 }
 
-/* =====================================================
-GLOBAL
-===================================================== */
+/*GLOBAL*/
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* extra backup to make anchor links scroll smoothly */
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; /* sets site font */
   background:
     radial-gradient(circle at top left, rgba(0, 229, 255, 0.08), transparent 30%),
     radial-gradient(circle at top right, rgba(139, 92, 246, 0.08), transparent 35%),
     var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  color: var(--text); /* text color from theme variables */
+  line-height: 1.6;   /* spacing between lines of text */
 
-  transition:
+  transition: /*transition smoothly*/
     background 0.4s ease,
     color 0.4s ease;
-}
+} 
 
 /* dark mode background glow */
 
@@ -69,20 +66,18 @@ body.dark {
 /* contact links */
 
 .contact-links a {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 600;
-  transition: 0.2s ease;
+  text-decoration: none;  /* removes underline */
+  color: var(--accent);   /* accent color */
+  font-weight: 600;       /* slightly bold */
+  transition: 0.2s ease;  /* smooth hover animation */
 }
 
 .contact-links a:hover {
-  color: var(--primary);
-  text-shadow: 0 0 8px var(--primary);
+  color: var(--primary);    /* changes color on hover */
+  text-shadow: 0 0 8px var(--primary);   /* glowing effect */
 }
 
-/* =====================================================
-TYPOGRAPHY / BASIC ELEMENTS
-===================================================== */
+/*TYPOGRAPHY / BASIC ELEMENTS*/
 
 h2 {
   font-size: 2.2rem;
@@ -104,42 +99,36 @@ ul {
   list-style-position: inside;
 }
 
-/* =====================================================
-LOGO
-===================================================== */
+/*LOGO*/
 
 .logo {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 800;
+  text-decoration: none; /* removes underline */
+  color: inherit;   /* uses parent text color */
+  font-weight: 800;  /* bold */
   font-size: 1.5rem;
-  cursor: pointer;
+  cursor: pointer;   /* cursor becomes pointer */
 }
 
 .logo:hover {
-  color: var(--primary);
+  color: var(--primary);  /* glow highlight on hover */
 }
 
-/* =====================================================
-PROGRESS BAR
-===================================================== */
+/* PROGRESS BAR*/
 
 .progress-bar {
-  position: fixed;
+  position: fixed;  /* stays at top of screen */
   top: 0;
   left: 0;
-  height: 4px;
-  width: 0%;
+  height: 4px;   /* thin bar */
+  width: 0%;     /* JS increases this as user scrolls */
   background: linear-gradient(90deg, var(--primary), var(--accent));
-  z-index: 2000;
+  z-index: 2000;  /* ensures it appears above everything */
 }
 
-/* =====================================================
-NAVBAR
-===================================================== */
+/*NAVBAR*/
 
 .navbar {
-  position: sticky;
+  position: sticky;  /* sticks to top when scrolling */
   top: 0;
   z-index: 1000;
 
@@ -180,34 +169,32 @@ NAVBAR
   text-shadow: 0 0 8px var(--primary);
 }
 
-/* =====================================================
-THEME SWITCH
-===================================================== */
+/*THEME SWITCH*/
 
 .theme-switch {
-  position: relative;
+  position: relative; /* allows child elements to be positioned inside */
   width: 52px;
   height: 28px;
-  flex: 0 0 auto;
+  flex: 0 0 auto;   /* prevents flexbox from stretching or shrinking it */
 }
 
 .theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  opacity: 0;  /* makes the checkbox invisible */
+  width: 0;   /* removes visual width */
+  height: 0;   /* removes visual height */
 }
 
 .slider {
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
-  border-radius: 999px;
+  position: absolute;  /* positions relative to .theme-switch */
+  inset: 0;    /* shorthand for top:0 right:0 bottom:0 left:0 */
+  cursor: pointer;   /* shows pointer cursor when hovering */
+  border-radius: 999px;  /* creates pill-shaped switch */
   background: #c7d2fe;
-  transition: 0.3s ease;
+  transition: 0.3s ease;  /* smooth animation when toggled */
 }
 
 .slider::before {
-  content: "";
+  content: "";   /* required for pseudo-element to render */
   position: absolute;
   width: 22px;
   height: 22px;
@@ -218,41 +205,39 @@ THEME SWITCH
   transition: 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
+/* when checkbox is checked, change switch background */
 .theme-switch input:checked + .slider {
   background: linear-gradient(90deg, var(--primary), var(--accent));
 }
-
+/* when checked, move the toggle knob to the right */
 .theme-switch input:checked + .slider::before {
   transform: translateX(24px);
 }
 
-/* =====================================================
-HERO SECTION
-===================================================== */
+/* HERO SECTION*/
 
 .hero {
-  width: min(1100px, calc(100% - 32px));
-  margin: 28px auto 0;
-  padding: 72px 56px;
+  width: min(1100px, calc(100% - 32px)); /* responsive container width */
+  margin: 28px auto 0;   /* center horizontally */
+  padding: 72px 56px;   /* inner spacing */
 
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  align-items: center;
-  gap: 48px;
+  display: grid;  /* uses CSS grid layout */
+  grid-template-columns: 1.15fr 0.85fr;  /* text column wider than image */
+  align-items: center;  /* vertically centers content */
+  gap: 48px;  /* space between columns */
 
   background: linear-gradient(
       135deg,
       rgba(0, 229, 255, 0.08),
       rgba(139, 92, 246, 0.08)
     ),
-    var(--card);
+    var(--card);  /* gradient overlay + card background */
 
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  box-shadow: var(--shadow);
+  border: 1px solid var(--border);  /* subtle border */
+  border-radius: 28px;             /* rounded container */
+  box-shadow: var(--shadow);       /* soft drop shadow */
 
-  transition: background 0.4s ease;
+  transition: background 0.4s ease;  /* smooth background change for dark mode */
 }
 
 body.dark .hero {
@@ -265,43 +250,41 @@ body.dark .hero {
 }
 
 .hero-text h1 {
-  font-size: clamp(3rem, 7vw, 5rem);
-  line-height: 0.95;
-  margin-bottom: 24px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-size: clamp(3rem, 7vw, 5rem);  /* responsive heading size */
+  line-height: 0.95;      /* tighter line spacing */
+  margin-bottom: 24px;    /* space below heading */
+  font-weight: 800;  /* very bold */
+  letter-spacing: -0.04em;  /* tighter letters for modern look */
 }
 
 .hero-text p {
-  font-size: 1.3rem;
-  max-width: 650px;
-  margin-bottom: 32px;
+  font-size: 1.3rem;   /* larger intro text */
+  max-width: 650px;    /* limits width for readability */
+  margin-bottom: 32px;    /* space below paragraph */
 }
 
 .hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;    /* flexbox for centering */
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
 }
 
 .hero-image img {
   width: 380px;
   height: auto;
-  border-radius: 28px;
-  border: 1px solid var(--border);
+  border-radius: 28px;  /* rounded image corners */
+  border: 1px solid var(--border);  
   display: block;
 
   box-shadow:
-    0 0 24px var(--primary),
-    0 16px 40px rgba(0,0,0,0.4);
+    0 0 24px var(--primary),       /* glowing effect */
+    0 16px 40px rgba(0,0,0,0.4);   /* deep shadow */
 }
 
-/* =====================================================
-SECTIONS
-===================================================== */
+/* SECTIONS*/
 
 .section {
-  width: min(1100px, calc(100% - 32px));
+  width: min(1100px, calc(100% - 32px));  /* responsive container width */
   margin: 28px auto 0;
   padding: 56px;
   background: var(--card);
@@ -309,31 +292,30 @@ SECTIONS
   border-radius: 24px;
   box-shadow: var(--shadow);
 
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 0;                   /* initially hidden */
+  transform: translateY(30px);   /* slightly lowered */
   transition:
     opacity 0.6s ease,
     transform 0.6s ease,
     background 0.4s ease;
 }
-
+/* triggered when JS adds "revealed" class */
 .section.revealed {
   opacity: 1;
   transform: translateY(0);
 }
-
+/* performance optimization */
 .section {
   will-change: transform, opacity;
 }
 
-/* =====================================================
-PROJECTS
-===================================================== */
+/*PROJECTS*/
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 equal columns */
+  gap: 28px;                                        /* spacing between cards */
+
 }
 
 .project-card {
@@ -353,18 +335,18 @@ body.dark .project-card {
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px);  /* lifts card upward */
   border-color: var(--primary);
 
   box-shadow:
-    0 0 18px var(--primary),
+    0 0 18px var(--primary),                /* glow */
     0 18px 35px rgba(15, 23, 42, 0.14);
 }
 
 .project-card img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: cover;   /* prevents image distortion */
   border-radius: 14px;
   margin-bottom: 16px;
 }
@@ -374,16 +356,14 @@ body.dark .project-card {
   margin-bottom: 10px;
 }
 
-/* =====================================================
-HOBBIES
-===================================================== */
+/*HOBBIES*/
 
 .hobby-list {
-  padding-left: 20px;
+  padding-left: 20px;  /* spacing for bullet list */
 }
 
 .hobby-list li {
-  margin-bottom: 10px;
+  margin-bottom: 10px;   /* space between list items */
 }
 
 .hobbies-layout {
@@ -407,15 +387,13 @@ HOBBIES
   box-shadow: var(--shadow);
 }
 
-/* =====================================================
-ABOUT PAGE IMAGES
-===================================================== */
+/*ABOUT PAGE IMAGES*/
 
 .about-images {
   display: flex;
   gap: 20px;
   margin-top: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;   /* wraps images on smaller screens */
 }
 
 .about-images img {
@@ -424,17 +402,15 @@ ABOUT PAGE IMAGES
   box-shadow: var(--shadow);
 }
 
-/* =====================================================
-FORM
-===================================================== */
+/*FORM*/
 
 form {
   max-width: 620px;
 }
 
 form label {
-  display: block;
-  margin: 16px 0 8px;
+  display: block;  /* makes each label appear on its own line */
+  margin: 16px 0 8px;  /* adds space above and below the label */
   font-weight: 600;
 }
 
@@ -456,60 +432,65 @@ body.dark textarea {
 
 input:focus,
 textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.12);
+  outline: none; /* removes default browser outline */
+  border-color: var(--primary);    /* changes border color to highlight color */
+  box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.12);  /* glow ring around input */
 }
 
-/* =====================================================
-BUTTONS
-===================================================== */
+/*BUTTONS*/
 
 .primary-btn,
 form button {
-  display: inline-flex;
+  display: inline-flex;    /* allows flexbox alignment inside the button */
   align-items: center;
   justify-content: center;
 
   padding: 14px 26px;
   border: none;
-  border-radius: 14px;
+  border-radius: 14px;  /* rounded button corners */
   cursor: pointer;
 
-  font: inherit;
+  font: inherit;    /* Uses the page font */
   font-weight: 700;
 
-  color: #03131b;
+  color: #03131b;   /* dark text color */
 
   background: linear-gradient(90deg, var(--primary), #53f4ff);
 
   box-shadow: 0 0 18px rgba(0, 229, 255, 0.28);
 
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    filter 0.2s ease;
+    transform 0.2s ease,  /* smooth movement animation */
+    box-shadow 0.2s ease,   /* smooth shadow animation */
+    filter 0.2s ease;      /* smooth brightness change */
 }
 
 .primary-btn:hover,
 form button:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.03);
+  transform: translateY(-2px);   /* slightly lifts button upward */
+  filter: brightness(1.03);      /* makes button slightly brighter */
 
   box-shadow:
     0 0 14px var(--primary),
     0 0 28px var(--accent);
+      /* stronger glow on hover */
+
 }
 
 .dark .primary-btn,
 .dark form button {
 
   background: linear-gradient(90deg, #ff2d2d, #b91c1c);
+    /* red gradient background for dark mode */
+
   color: white;
+    /* white text for better contrast */
+
 
   box-shadow:
     0 0 10px rgba(255,45,45,0.5),
     0 0 20px rgba(185,28,28,0.4);
+    /* red glow */
 }
 
 .dark .primary-btn:hover,
@@ -526,9 +507,7 @@ form button {
   margin-top: 18px;
 }
 
-/* =====================================================
-FOOTER
-===================================================== */
+/*FOOTER*/
 
 footer {
   width: min(1100px, calc(100% - 32px));
@@ -543,31 +522,37 @@ footer {
   box-shadow: var(--shadow);
 }
 
-/* =====================================================
-RESPONSIVE
-===================================================== */
+/*RESPONSIVE DESIGN*/
+
+/* these styles apply when the screen is smaller than 900px */
 
 @media (max-width: 900px) {
+      /* navbar adjusts for smaller screens */
 
   .navbar {
     padding: 16px 18px;
     flex-wrap: wrap;
   }
+      /* hero section becomes single column */
 
   .hero {
     grid-template-columns: 1fr;
     padding: 44px 24px;
     text-align: center;
   }
+    /* centers hero paragraph text */
 
   .hero-text p {
     margin-left: auto;
     margin-right: auto;
   }
+    /* projects switch from 2 columns to 1 column */
 
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  /* reduces padding for sections and footer */
 
   .section,
   footer {

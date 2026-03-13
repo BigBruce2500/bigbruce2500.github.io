@@ -4,16 +4,20 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="About Caden Bruce - UC Berkeley EECS student">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--responsive for mobile devices-->
+<meta name="description" content="About Caden Bruce - UC Berkeley EECS student"> <!-- description used by search engines when your site appears in results -->
+
 
 <script>
+  /* JS that checks if dark mode was previously selected, same as previous html page */
+
 if (localStorage.getItem("theme") === "dark") {
   document.documentElement.classList.add("dark");
 }
-</script>
+</script> <!-- if dark mode was saved in the browser, add the "dark" class to the page -->
 
-<title>About | Caden Bruce</title>
+
+<title>About | Caden Bruce</title> <!--title for browser tab-->
 
 <link rel="stylesheet" href="style.css">
 
@@ -22,19 +26,20 @@ if (localStorage.getItem("theme") === "dark") {
 
 </head>
 
-<body>
+<body> <!-- beginning of visible webpage content -->
 
-<div class="progress-bar"></div>
+
+<div class="progress-bar"></div> <!--progress bar like main html page -->
 
 <header class="navbar">
-  <a href="#" class="logo" id="homeLogo">Caden Bruce</a>
+  <a href="#" class="logo" id="homeLogo">Caden Bruce</a> <!--name acts as website logo and links to top of page-->
 
-  <nav class="nav-links">
+  <nav class="nav-links"> <!--nav links for this page, linking nack to home or refresh current page-->
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
   </nav>
 
-  <label class="theme-switch">
+  <label class="theme-switch"> <!--same dark mode toggle button as main html page as a checkbox with style elemnt slider action toggle-->
     <input type="checkbox" id="darkModeToggle">
     <span class="slider"></span>
   </label>
@@ -177,7 +182,7 @@ provide the same support and stability they gave me growing up.
 </footer>
 
 
-<script src="script.js"></script>
+<script src="script.js"></script> <!--links JS file that conrols dark mode toggle, scrolling, and more-->
 
 </body>
 

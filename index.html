@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lag="en">
 
 <head>
 
@@ -8,6 +8,7 @@
 <meta name="description" content="Personal website of Caden Bruce - UC Berkeley EECS student, programmer, and builder.">
 
 <script>
+  /* JS that runs before the page loads to apply dark mode if it was saved previously */
 if (localStorage.getItem("theme") === "dark") {
   document.documentElement.classList.add("dark");
 }
@@ -15,38 +16,38 @@ if (localStorage.getItem("theme") === "dark") {
 
 <title>Caden's Portfolio</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"> <!--connect CSS file to website-->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!--connect early to google font servers-->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<!--import inter font with diff weights-->
 </head>
 
 <body>
     <body id="top">
-  <div class="progress-bar"></div>
+  <div class="progress-bar"></div> <!--progress bar element for css-->
 
   <header class="navbar">
-    <a href="#" class="logo">Caden Bruce</a>
+    <a href="#" class="logo">Caden Bruce</a> <!--links name to scroll to top of page-->
 
     <nav class="nav-links">
-      <a href="about.html">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="Resume/CadenBruce_Resume.pdf" target="_blank">Resume</a>
+      <a href="about.html">About</a> <!--no # needed as it is a file path-->
+      <a href="#projects">Projects</a> <!--# in front of projects and contact so browser knows its an ID-->
+      <a href="#contact">Contact</a> 
+      <a href="Resume/CadenBruce_Resume.pdf" target="_blank">Resume</a> <!--no # needed as it is a file path-->
 
     </nav>
 
-    <label class="theme-switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider"></span>
+    <label class="theme-switch"> <!--container for dark mode toggle switch-->
+      <input type="checkbox" id="darkModeToggle"> <!--checkbox input that JS uses to toggle dark mode-->
+      <span class="slider"></span> <!--make it look like a slider-->
     </label>
   </header>
 
  <!-- Hero Section -->
-<section class="hero">
+<section class="hero"> 
 
-<div class="hero-text">
+<div class="hero-text"> <!--container for text on left side-->
 
 <h1>Hi, I'm Caden Bruce</h1>
 
@@ -55,13 +56,13 @@ Electrical Engineering and Computer Science student at UC Berkeley.
 I enjoy building technology, exploring robotics, and developing software projects.
 </p>
 
-<div class="hero-buttons">
-<button class="primary-btn">View My Work</button>
+<div class="hero-buttons"> <!--container for buttons-->
+<button class="primary-btn">View My Work</button> <!--button that scrolls to projects-->
 </div>
 
 </div>
 
-<div class="hero-image">
+<div class="hero-image"> <!--container for portrait image-->
 <img src="Images/Portrait.png" alt="Caden Bruce">
 </div>
 
@@ -70,12 +71,12 @@ I enjoy building technology, exploring robotics, and developing software project
 <!-- Projects Section -->
 
 <section id="projects" class="section">
+<!-- section that contains your projects. ID allows navigation scrolling -->
+<h2>Projects</h2> 
 
-<h2>Projects</h2>
+<div class="projects-grid"> <!--container that golds all project cards-->
 
-<div class="projects-grid">
-
-<div class="project-card">
+<div class="project-card"> <!--individual project card-->
 
 <img src="Images/micromouse.avif" alt="Micromouse Robot">
 
@@ -113,17 +114,17 @@ Git and will continue to evolve as I develop new projects.
 <!-- Contact Section -->
 
 
-<section id="contact" class="section">
+<section id="contact" class="section"> 
 
 <h2>Contact Me</h2>
 
-<p class="contact-links">
+<p class="contact-links"> <!--contact links for linkedin and email-->
   <a href="https://www.linkedin.com/in/cadenbruce/" target="_blank">LinkedIn</a> |
   <a href="mailto:cbruce22@berkeley.edu">cbruce22@berkeley.edu</a>
 </p>
 
 <form id="contact-form" action="https://formspree.io/f/mwvrpbnz" method="POST">
-
+<!-- contact form that sends messages using Formspree -->
 <label>Name</label>
 <input type="text" name="name" required>
 
@@ -147,7 +148,7 @@ Git and will continue to evolve as I develop new projects.
 </footer>
 
 
-<script src="script.js"></script>
+<script src="script.js"></script> <!--links JS file-->
 
 </body>
 

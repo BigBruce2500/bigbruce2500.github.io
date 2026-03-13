@@ -3,36 +3,37 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Message Sent</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--responsive for mobile, scales correctly-->
+<title>Message Sent</title> <!--title show in browser tab-->
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css"> <!--css file incase i wish to add css in the future-->
 
 <style>
+/* internal CSS styling applied only to this page */
 
-body{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  text-align:center;
+body{ 
+  display:flex;              /* turns the body into a flex container */
+  justify-content:center; /* centers the content */
+  align-items:center;      /* vertically centers the content */
+  height:100vh;          /* makes the body the full height of the screen */
+  text-align:center;     /* Centers text inside the body */
 }
 
-.thankyou-box{
-  padding:60px;
-  border-radius:20px;
-  max-width:500px;
+.thankyou-box{       
+  padding:60px;      /* adds space inside the box around the content */
+  border-radius:20px;  /* rounds the corners of the box */
+  max-width:500px;     /* limits the width so it doesn't stretch too wide */
 }
 
 .thankyou-box h1{
-  font-size:36px;
-  margin-bottom:15px;
+  font-size:36px;  /* makes the heading larger */
+  margin-bottom:15px;   /* adds space below the heading */
 }
 
 .thankyou-box p{
-  font-size:18px;
-  opacity:0.85;
-  margin-bottom:30px;
+  font-size:18px; /* sets size of the paragraph text */
+  opacity:0.85;      /* makes the text slightly transparent */
+  margin-bottom:30px;  /* adds space below the paragraph */
 }
 
 </style>
@@ -40,6 +41,7 @@ body{
 </head>
 
 <body>
+<!-- visible content of the webpage begins here -->
 
 <div class="thankyou-box">
 
@@ -52,6 +54,7 @@ Thank you for reaching out. I’ll get back to you as soon as possible.
 <a href="index.html" class="primary-btn">
 Back to Home
 </a>
+<!-- button-style link that sends the user back to the homepage -->
 
 </div>
 
