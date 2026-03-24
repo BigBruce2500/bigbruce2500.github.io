@@ -56,7 +56,7 @@ body {
 
 /* dark mode background glow */
 
-body.dark {
+.dark body {
   background:
     radial-gradient(circle at top left, rgba(255, 45, 45, 0.18), transparent 35%),
     radial-gradient(circle at top right, rgba(185, 28, 28, 0.18), transparent 40%),
@@ -240,7 +240,7 @@ ul {
   transition: background 0.4s ease;  /* smooth background change for dark mode */
 }
 
-body.dark .hero {
+.dark .hero {
   background: linear-gradient(
       135deg,
       rgba(255, 45, 45, 0.08),
@@ -330,7 +330,7 @@ body.dark .hero {
     border-color 0.25s ease;
 }
 
-body.dark .project-card {
+.dark .project-card {
   background: rgba(255, 255, 255, 0.02);
 }
 
@@ -425,8 +425,8 @@ textarea {
   font: inherit;
 }
 
-body.dark input,
-body.dark textarea {
+.dark input,
+.dark textarea {
   background: rgba(255, 255, 255, 0.03);
 }
 
